@@ -60,6 +60,7 @@ public class WechatServlet extends HttpServlet {
         } else {  
             //正常的微信处理流程  
             result = new WechatProcess().processWechatMag(xml);  
+            System.out.println(result);
         }  
   
         try {  
