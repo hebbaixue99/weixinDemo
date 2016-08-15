@@ -1,0 +1,91 @@
+@charset "UTF-8";
+.qq_menu_layer_v2 {
+	position:fixed;
+	top:0;
+	left:0;
+	bottom:0;
+	right:0;
+	background-color:transparent;
+	z-index:950;
+	font-family:Helvetica,STHeiti STXihei, Microsoft JhengHei, Microsoft YaHei, Arial
+}
+.qq_menu_v2 {
+	position:fixed;
+	top:0;
+	right:0;
+	width:140px;
+	background-color:#FFF;
+	-moz-box-shadow:0px 2px 8px rgba(0, 0, 0, 0.25);
+	-webkit-box-shadow:0px 2px 8px rgba(0, 0, 0, 0.25);
+	box-shadow:0px 2px 8px rgba(0, 0, 0, 0.25)
+}
+.qq_menu_v2 ul {
+	margin:0;
+	padding:0;
+	width:100%;
+	list-style:none;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box
+}
+.qq_menu_v2 ul:after {
+	clear:both;
+	content:'\20';
+	display:block
+}
+.qq_menu_v2 ul li {
+	margin:0;
+	padding:0;
+	height:44px;
+	line-height:44px;
+	border-bottom:solid 1px #dedfe0;
+	text-align:left;
+	background-color:white;
+	position:relative
+}
+.qq_menu_v2 ul li:last-child {
+	border-bottom:0 none
+}
+.qq_menu_v2 ul li a {
+	text-decoration:none
+}
+.qq_menu_v2 ul li span {
+	display:block;
+	color:#000;
+	padding-left:56px
+}
+.qq_menu_v2 ul li i {
+	position:absolute;
+	left:15px;
+	top:9px
+}
+.qq_menu_v2 ul li span {
+	font-size:15px
+}
+.qq_menu_v2 .icon_star,.qq_menu_v2 .icon_share,.qq_menu_v2 .icon_profile,.qq_menu_v2 .icon_cart,.qq_menu_v2 .icon_home,.qq_menu_v2 .icon_search,.qq_menu_v2 .icon_history {
+	width:23px;
+	height:23px;
+	display:inline-block;
+	background:transparent url(/fd/sq/img/base/qq_menu_icons_v4.png?t=1207) no-repeat center center;
+	background-size:150px 50px
+}
+.qq_menu_v2 .icon_star {
+	background-position:0 1px
+}
+.qq_menu_v2 .icon_share {
+	background-position:-23px 0
+}
+.qq_menu_v2 .icon_profile {
+	background-position:-46px 1px
+}
+.qq_menu_v2 .icon_cart {
+	background-position:-69px 0
+}
+.qq_menu_v2 .icon_home {
+	background-position:-92px 0
+}
+.qq_menu_v2 .icon_search {
+	background-position:-115px 0
+}
+.qq_menu_v2 .icon_history {
+	background-position:0 -24px
+}

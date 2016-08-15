@@ -1,26 +1,16 @@
-<%@ page language="java" import="java.util.*" pageEncoding="ISO-8859-1"%>
+<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
 <%
+//https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=wx4a82bb9891f2bdc1&secret=4e2003db8e93049f46694f17c7cd3ba2
+//{"access_token":"Om4MIMccfB_2AmJGlsuGUMfSLQSNqV0xSaaVTNvg71C8NMKrxE2zZKslWVRrRqOXWt5V3rvi3mPI_sdlzbiKfnfyILOevawLqZ3Z96XFL_TGNpvIzoNwkBhs_tcY0KZ-FVNiAGANDV","expires_in":7200}
+String appID = "wx4a82bb9891f2bdc1";
+String appsecret="4e2003db8e93049f46694f17c7cd3ba2";
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+  System.out.println("开始签名校验");
+  String signature = request.getParameter("signature");
+  String timestamp = request.getParameter("timestamp");
+  String nonce = request.getParameter("nonce");
+  String echostr = request.getParameter("echostr");
+  response.getWriter().println(echostr);
 %>
-
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
-  <head>
-    <base href="<%=basePath%>">
-    
-    <title>My JSP 'index.jsp' starting page</title>
-	<meta http-equiv="pragma" content="no-cache">
-	<meta http-equiv="cache-control" content="no-cache">
-	<meta http-equiv="expires" content="0">    
-	<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
-	<meta http-equiv="description" content="This is my page">
-	<!--
-	<link rel="stylesheet" type="text/css" href="styles.css">
-	-->
-  </head>
-  
-  <body>
-    This is my JSP page. <br>
-  </body>
-</html>
+ 

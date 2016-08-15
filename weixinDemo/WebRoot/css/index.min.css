@@ -1,0 +1,88 @@
+@charset "UTF-8";
+.emo_rain {
+	-webkit-transform:translate3d(0,0,0);
+	transform:translate3d(0,0,0)
+}
+.emo_rain .emo_coupon {
+	position:absolute;
+	left:50%;
+	margin-left:-50px;
+	width:100px;
+	height:80px;
+	background:url(//wq.360buyimg.com/fd/promote/201607/olympic_bonus/images/coupon_cdabcf0b.png) no-repeat center center;
+	background-size:100% 100%;
+	z-index:20
+}
+.olympic_popup_bd,.olympic_popup_btn,.olympic_popup_close::after {
+	background:url(//wq.360buyimg.com/fd/promote/201607/olympic_bonus/images/popup_bg_440dc26c.png) no-repeat;
+	background-size:270px
+}
+.olympic_popup {
+	position:fixed;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	z-index:300;
+	font-size:13px;
+	background:rgba(0,0,0,.8)
+}
+.olympic_popup_bd {
+	position:absolute;
+	width:270px;
+	height:270px;
+	left:50%;
+	top:50%;
+	padding:100px 20px 0;
+	margin:-135px 0 0 -135px;
+	text-align:center;
+	color:#ff0;
+	box-sizing:border-box;
+	line-height:18px
+}
+.olympic_popup_bd p {
+	margin:3px 0
+}
+.olympic_popup_ctn {
+	height:80px;
+	display:-webkit-box;
+	display:-webkit-flex;
+	display:flex;
+	-webkit-box-orient:vertical;
+	-webkit-box-direction:normal;
+	-webkit-flex-direction:column;
+	flex-direction:column;
+	-webkit-box-pack:center;
+	-webkit-justify-content:center;
+	justify-content:center
+}
+.olympic_popup_btn {
+	position:absolute;
+	left:50%;
+	top:190px;
+	width:160px;
+	height:40px;
+	margin-left:-80px;
+	line-height:40px;
+	text-align:center;
+	color:#fff;
+	background-position:0 -275px
+}
+.olympic_popup_close {
+	position:absolute;
+	left:190px;
+	top:10px;
+	width:30px;
+	height:30px
+}
+.olympic_popup_close::after {
+	content:'';
+	position:absolute;
+	left:5px;
+	top:5px;
+	width:20px;
+	height:20px;
+	background-color:#45ba45;
+	border-radius:20px;
+	background-position:-176px -275px
+}
