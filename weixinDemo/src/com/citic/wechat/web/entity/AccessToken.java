@@ -20,11 +20,19 @@ public class AccessToken  {
 	private static Date getAccessTokenTime;
 	private static int expiresPeriod = 7200;
 	private static String mAccessToken;
+	private static String appID = "wx4a82bb9891f2bdc1";
+	private static String appsecret="4e2003db8e93049f46694f17c7cd3ba2";
 	public static String accessToken()
 	{
-		if (mAccessToken==null||mAccessToken.equals(""))
+		if (mAccessToken==null||mAccessToken.equals("")||hasExpired())
 		{
-			
+			try{
+			GetAccessToken(appID,appsecret) ;	
+			}
+			catch(Exception e)
+			{
+				
+			}
 		}
 		return mAccessToken;
 	}
@@ -35,7 +43,7 @@ public class AccessToken  {
     @SuppressWarnings("unused")
 	private static String GetAccessToken(String appId, String appSecret) throws  IOException, JSONException 
     {
-        String url = String.format("https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid={0}&secret={1}", appId, appSecret);
+        String url = String.format("https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=%s&secret=%s", appId, appSecret);
      // 创建HttpClient实例     
         HttpClient httpclient = new DefaultHttpClient();  
         // 创建Get方法实例     
@@ -92,7 +100,7 @@ public class AccessToken  {
  
     /// </summary>
     /// <returns>bool</returns>
-    private static boolean HasExpired()
+    private static boolean hasExpired()
     {
         if (getAccessTokenTime != null)
         {

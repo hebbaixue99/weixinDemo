@@ -19,6 +19,8 @@ import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;  
 import org.apache.http.impl.client.DefaultHttpClient; 
 
+import com.citic.wechat.web.entity.AccessToken;
+
 public class Test extends HttpServlet {
 
 	/**
@@ -50,7 +52,8 @@ public class Test extends HttpServlet {
 			throws ServletException, IOException {
 		String url="https://api.weixin.qq.com/cgi-bin/";
 		//getcallbackip?
-		String access_token="Om4MIMccfB_2AmJGlsuGUMfSLQSNqV0xSaaVTNvg71C8NMKrxE2zZKslWVRrRqOXWt5V3rvi3mPI_sdlzbiKfnfyILOevawLqZ3Z96XFL_TGNpvIzoNwkBhs_tcY0KZ-FVNiAGANDV";
+		//String access_token="Om4MIMccfB_2AmJGlsuGUMfSLQSNqV0xSaaVTNvg71C8NMKrxE2zZKslWVRrRqOXWt5V3rvi3mPI_sdlzbiKfnfyILOevawLqZ3Z96XFL_TGNpvIzoNwkBhs_tcY0KZ-FVNiAGANDV";
+		String access_token = AccessToken.accessToken();
 		String path = request.getContextPath();
 		String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 		String ps=request.getParameter("ps");
